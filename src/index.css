@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for a cozy feel */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.primary.light');
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.primary.dark');
+  border-radius: 10px;
+  border: 2px solid theme('colors.primary.light');
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.accent.brown');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans bg-primary-light text-text min-h-screen flex flex-col;
+}
+#root {
+  @apply flex flex-col flex-grow;
+}
